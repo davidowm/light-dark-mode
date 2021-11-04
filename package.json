@@ -1,0 +1,15 @@
+{
+  "name": "light-dark-mode",
+  "version": "1.0.0",
+  "description": "Switch page between light and dark mode",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Marci Davidow",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  }
+}
