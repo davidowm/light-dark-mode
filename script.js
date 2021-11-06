@@ -1,4 +1,9 @@
-'use strict';
+import imageURL_pcd_dark from 'url:./img/undraw_proud_coder_dark.svg';
+import imageURL_pcd_light from 'url:./img/undraw_proud_coder_light.svg';
+import imageURL_fp_dark from 'url:./img/undraw_feeling_proud_dark.svg';
+import imageURL_fp_light from 'url:./img/undraw_feeling_proud_light.svg';
+import imageURL_ci_dark from 'url:./img/undraw_conceptual_idea_dark.svg';
+import imageURL_ci_light from 'url:./img/undraw_conceptual_idea_light.svg';
 
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const nav = document.getElementById('nav');
@@ -10,9 +15,17 @@ const textBox = document.getElementById('text-box');
 
 //Dark or Light images
 const imageMode = function (color) {
-  image1.src = require(`img/undraw_proud_coder_${color}.svg`);
-  image2.src = require(`img/undraw_feeling_proud_${color}.svg`);
-  image3.src = require(`img/undraw_conceptual_idea_${color}.svg`);
+  color === 'dark'
+    ? (image1.src = imageURL_pcd_dark)
+    : (image1.src = imageURL_pcd_light);
+  color === 'dark'
+    ? (image2.src = imageURL_fp_dark)
+    : (image2.src = imageURL_fp_light);
+  color === 'dark'
+    ? (image3.src = imageURL_ci_dark)
+    : (image3.src = imageURL_ci_light);
+  //  image2.src = `${imageURL}undraw_feeling_proud_${color}.svg`;
+  //image3.src = `${imageURL}/undraw_conceptual_idea_${color}.svg`;
 };
 
 const toggleDarkLightMode = function (isDark) {

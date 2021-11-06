@@ -10,6 +10,10 @@
   "author": "Marci Davidow",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.16.0",
     "parcel": "^2.0.0"
+  },
+  "dependencies": {
+    "babel-plugin-transform-glob-import": "^1.0.1"
   }
 }
